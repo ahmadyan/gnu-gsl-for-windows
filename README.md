@@ -96,27 +96,27 @@ sub-directory in a modified form:
 
 In GSL headers:
 
-  if !defined( GSL_FUN )
-    if !defined( GSL_DLL )
-      define GSL_FUN extern
-    elif defined( BUILD_GSL_DLL )
-      define GSL_FUN extern __declspec(dllexport)
-    else
-      define GSL_FUN extern __declspec(dllimport)
+    if !defined( GSL_FUN )
+      if !defined( GSL_DLL )
+        define GSL_FUN extern
+      elif defined( BUILD_GSL_DLL )
+        define GSL_FUN extern __declspec(dllexport)
+      else
+        define GSL_FUN extern __declspec(dllimport)
+      endif
     endif
-  endif
 
 In CBLAs headers (gsl_cblas.h):
 
-  if !defined( CBL_FUN )
-    if !defined( CBLAS_DLL )
-      define CBL_FUN extern
-    elif defined( BUILD_CBLAS_DLL )
-      define CBL_FUN extern __declspec(dllexport)
-    else
-      define CBL_FUN extern __declspec(dllimport)
+   if !defined( CBL_FUN )
+      if !defined( CBLAS_DLL )
+        define CBL_FUN extern
+      elif defined( BUILD_CBLAS_DLL )
+        define CBL_FUN extern __declspec(dllexport)
+      else
+        define CBL_FUN extern __declspec(dllimport)
+      endif
     endif
-  endif
 
 ### GSLDEFS
 
