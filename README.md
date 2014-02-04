@@ -108,7 +108,7 @@ In GSL headers:
 
 In CBLAs headers (gsl_cblas.h):
 
-   if !defined( CBL_FUN )
+    if !defined( CBL_FUN )
       if !defined( CBLAS_DLL )
         define CBL_FUN extern
       elif defined( BUILD_CBLAS_DLL )
