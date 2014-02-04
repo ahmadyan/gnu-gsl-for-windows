@@ -4,8 +4,7 @@ gnu-gsl-for-windows
 Fork of Brian Gladman's Gnu GSL package for windows, version 1.16
 
 
-Building the GNU Scientific Library with Microsoft Visual Sudio 2012
-====================================================================
+# Building the GNU Scientific Library with Microsoft Visual Sudio 2012
 
 This is GSL, the GNU Scientific Library, a collection of numerical 
 routines for scientific computing.  Please see the readme.txt file 
@@ -20,8 +19,8 @@ Visual Studio 2012, they can be used with Microsoft Visual C++
 Express 2012 and/or the Windows 7.1 SDK.  To run the GSL tests, 
 Python also needs to be installed (2.6 or later).
 
-1. Set Up Directories and Files
-===============================
+## Set Up Directories and Files
+
 
 First the GSL zip file for version 1.16 needs to be obtained and 
 expanded into a directory tree under a an  appropriate root directory. 
@@ -53,11 +52,11 @@ GSL build:
 In addition there are also a large number of test projects that
 will be described later.
 
-2. Building GSL
-===============
+## Building GSL
 
-Copying or Modifying GSL Header Files
--------------------------------------
+
+### Copying or Modifying GSL Header Files
+
 
 Either the 'gsldefs' or the 'gslhdrs' project has to be built
 BEFORE any GSL libraries are built. Do NOT run both --  gslhdrs
@@ -80,8 +79,8 @@ have the following directory layout:
 The follwoing two sections describe what gslhdrs and gsldefs programs
 do - you can skip these if you have completed this step successfully.
   
-GSLHDRS
--------
+### GSLHDRS
+
 
 The gslhdrs.exe executable collects all the headers into the gsl 
 sub-directory in a modified form:
@@ -97,30 +96,29 @@ sub-directory in a modified form:
 
 In GSL headers:
 
-#if !defined( GSL_FUN )
-#  if !defined( GSL_DLL )
-#    define GSL_FUN extern
-#  elif defined( BUILD_GSL_DLL )
-#    define GSL_FUN extern __declspec(dllexport)
-#  else
-#    define GSL_FUN extern __declspec(dllimport)
-#  endif
-#endif
+  if !defined( GSL_FUN )
+    if !defined( GSL_DLL )
+      define GSL_FUN extern
+    elif defined( BUILD_GSL_DLL )
+      define GSL_FUN extern __declspec(dllexport)
+    else
+      define GSL_FUN extern __declspec(dllimport)
+    endif
+  endif
 
 In CBLAs headers (gsl_cblas.h):
 
-#if !defined( CBL_FUN )
-#  if !defined( CBLAS_DLL )
-#    define CBL_FUN extern
-#  elif defined( BUILD_CBLAS_DLL )
-#    define CBL_FUN extern __declspec(dllexport)
-#  else
-#    define CBL_FUN extern __declspec(dllimport)
-#  endif
-#endif
+  if !defined( CBL_FUN )
+    if !defined( CBLAS_DLL )
+      define CBL_FUN extern
+    elif defined( BUILD_CBLAS_DLL )
+      define CBL_FUN extern __declspec(dllexport)
+    else
+      define CBL_FUN extern __declspec(dllimport)
+    endif
+  endif
 
-GSLDEFS
--------
+### GSLDEFS
 
 The project gsldefs can be used as an ALTERNATIVE to gslhdrs. This 
 copies the header files as before but then creates DEF files that 
@@ -130,8 +128,7 @@ used the DEF files gsl.def and cblas.def need to be added to the
 respective DLL projects manually as the default build approach is 
 based on the use of gslhdrs.
 
-Static Library Build
---------------------
+## Static Library Build
 
 At this point the two library projects can be built. The resulting
 libraries are placed in appropriate subdirectories within the
@@ -146,8 +143,7 @@ gsl-1.16 directory as follows:
 	      release
 	      debug
 
-DLL Build
----------
+## DLL Build
 
 The VC++ DLL build projects can be built as required. Note, however,
 that either gslhdrs.exe or gsldefs.exe must be run first as described
@@ -163,8 +159,8 @@ subdirectories within the gsl-1.16 directory:
 			  release
 			  debug
 
-Testing
--------
+## Testing
+
 
 The GSL solution files test.gsl.lib.sln or test.gsl.dll.sln can be used
 to test the GSL static or DLL libraries.  The configuration set for these
@@ -190,15 +186,14 @@ tests (after the tests have been built in Visual Studio by running the
 programs run_tests.py found in the libtests and dlltests directories 
 respectively.   
 
-NOTE
-----
+## NOTE
 
 The DLL projects can be built using either method but the method using 
 gslhdrs, although more complex, allows the direct import of DLL symbols
 and direct static and dynamic linking.
 
-GSL Use in Windows Applications.
-================================
+# GSL Use in Windows Applications.
+
 
 The GSL and CBLAS static libraries can be used in a straightforward way 
 with Windows Applications. These are multi threaded since single threaded 
