@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.21006.1</_ProjectFileVersion>
+    <OutDir>$(SolutionDir)..\dll\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(PlatformName)\$(Configuration)\</IntDir>
+    <EmbedManifest>true</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\;..\..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GSL_DLL;CBL_DLL;RELEASED;USE_DLL_FILEOPS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <GenerateManifest>true</GenerateManifest>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)..\dll\$(PlatformName)\$(ConfigurationName)\gsl.lib;$(SolutionDir)..\dll\$(PlatformName)\$(ConfigurationName)\cblas.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>"$(TargetPath)" &gt;"$(TargetDir)"/"$(TargetName)".out</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

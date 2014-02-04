@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="lib_tests"
+	OutputDirectory="$(SolutionDir)lib\$(PlatformName)\$(ConfigurationName)"
+	IntermediateDirectory="$(PlatformName)\$(ConfigurationName)"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		UseUnicodeResponseFiles="false"
+		AdditionalIncludeDirectories="..\..\;..\..\..\"
+		PreprocessorDefinitions="RELEASED"
+		DebugInformationFormat="3"
+		CompileAs="0"
+	/>
+	<Tool
+		Name="VCLinkerTool"
+		AdditionalDependencies="&quot;$(SolutionDir)&quot;lib\$(PlatformName)\$(ConfigurationName)\gsl.lib &quot;$(SolutionDir)&quot;lib\$(PlatformName)\$(ConfigurationName)\cblas.lib"
+		GenerateManifest="true"
+		GenerateDebugInformation="true"
+	/>
+	<Tool
+		Name="VCPostBuildEventTool"
+		CommandLine="&quot;$(TargetPath)&quot; &gt;&quot;$(TargetDir)&quot;/&quot;$(TargetName)&quot;.out"
+	/>
+	<Tool
+		Name="VCManifestTool"
+		EmbedManifest="true"
+	/>
+</VisualStudioPropertySheet>

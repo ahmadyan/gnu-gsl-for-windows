@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1E7A6EAB-AD24-44D9-A521-0F97CEF1A06B}</ProjectGuid>
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and $(VisualStudioVersion) == ''">$(VCTargetsPath11)</VCTargetsPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.21006.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cblas</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cblas</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cblas</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cblas</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>%(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;GSL_RANGE_CHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\;..\..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;GSL_RANGE_CHECK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderOutputFile>
+      </PrecompiledHeaderOutputFile>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\cblas\caxpy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ccopy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cdotc_sub.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cdotu_sub.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cgbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cgemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cgemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cgerc.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cgeru.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cher.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cher2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cher2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cherk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chpmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chpr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\chpr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\csscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\cswap.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\csymm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\csyr2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\csyrk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctbsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctpmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctpsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctrmm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctrmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctrsm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ctrsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dasum.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\daxpy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dcopy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ddot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dgbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dgemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dgemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dger.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dnrm2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\drot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\drotg.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\drotm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\drotmg.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsdot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dspmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dspr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dspr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dswap.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsymm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsymv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsyr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsyr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsyr2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dsyrk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtbsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtpmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtpsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtrmm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtrmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtrsm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dtrsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dzasum.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\dznrm2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\icamax.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\idamax.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\isamax.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\izamax.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sasum.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\saxpy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\scasum.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\scnrm2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\scopy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sdot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sdsdot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sgbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sgemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sgemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sger.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\snrm2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\srot.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\srotg.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\srotm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\srotmg.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sspmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sspr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sspr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\sswap.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssymm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssymv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssyr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssyr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssyr2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ssyrk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\stbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\stbsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\stpmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\stpsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\strmm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\strmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\strsm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\strsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\xerbla.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zaxpy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zcopy.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zdotc_sub.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zdotu_sub.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zdscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zgbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zgemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zgemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zgerc.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zgeru.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhemm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhemv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zher.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zher2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zher2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zherk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhpmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhpr.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zhpr2.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zscal.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zswap.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zsymm.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zsyr2k.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\zsyrk.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ztbmv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ztbsv.c">
+    </ClCompile>
+    <ClCompile Include="..\..\cblas\ztpmv.c" />
+    <ClCompile Include="..\..\cblas\ztpsv.c" />
+    <ClCompile Include="..\..\cblas\ztrmm.c" />
+    <ClCompile Include="..\..\cblas\ztrmv.c" />
+    <ClCompile Include="..\..\cblas\ztrsm.c" />
+    <ClCompile Include="..\..\cblas\ztrsv.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
